@@ -1,0 +1,74 @@
+!------------------------------------------------------------------------------
+! File:		    .Xresources
+! Author: 	    Igor Janjic
+! Description:  Xresources file for configuring urxvt.
+!------------------------------------------------------------------------------
+
+! Enable true transparency.
+URxvt*.transparent: true
+
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*.shading: 15
+
+! Disable scrollbar.
+URxvt.scrollBar: false
+
+URxvt.mouseWheelScrollPage: True
+
+! Font color.
+URxvt*foreground: white
+URxvt*background: black
+URxvt*color0: black
+URxvt*color1: red3
+URxvt*color2: green3
+URxvt*color3: yellow3
+URxvt*color4: blue2
+URxvt*color5: magenta3
+URxvt*color6: cyan3
+URxvt*color7: gray90
+URxvt*color8: grey50
+URxvt*color9: red
+URxvt*color10: green
+URxvt*color11: yellow
+URxvt*color12: rgb:5c/5c/ff
+URxvt*color13: magenta
+URxvt*color14: cyan
+URxvt*color15: white
+URxvt.highlightColor: green
+URxvt.cursorColor: green
+URxvt.cursorColor2: black
+URxvt.cursorBlink: true
+
+
+! Font.
+URxvt*font:               xft:Inconsolata\ for\ Powerline:style=Semibold:pixelsize=15:antialias=true:hinting=slight
+URxvt*boldFont:           xft:Inconsolata\ for\ Powerline:style=bold:pixelsize=15:antialias=true:hinting=slight
+
+! Letter spacing.
+URxvt.letterSpace: -1
+
+! Clickable urls.
+URxvt.perl-ext: default,url-select
+URxvt.keysym.C-i: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! Perl extensions
+URxvt.perl-ext-common: default,tabbed,fullscreen,font-size,clipboard
+
+! Adds tab support.
+URxvt.tabbed.tabbar-fg: 1
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tab-fg: 4
+URxvt.tabbed.tab-bg: -1
+
+! Fullscreen.
+URxvt.keysym.F11: perl:fullscreen:switch
+
+! Changing font size on the fly.
+!URxvt.iso14755: false
+!URxvt.iso14755_52: false
+!URxvt.keysym.C-Up:     perl:font-size:increase
+!URxvt.keysym.C-Down:   perl:font-size:decrease
+!URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+!URxvt.keysym.C-S-Down: perl:font-size:decglobal
