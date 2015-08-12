@@ -11,6 +11,8 @@
 # Configuration
 ##
 
+PS1="\n \[\e[1;37m\]┌─[ \[\e[1;34m\]\u \[\e[1;34m\]@ \[\e[1;32m\]\w \[\e[1;37m\]]\[\e[1;35m\] \n\[\e[1;37m\] └─[\[\e[1;36m\] \d \[\e[1;33m\]\T \[\e[1;37m\]]--> \[\e[0;37m\]" 
+
 # Fortune. :)
 fortune
 
@@ -19,7 +21,6 @@ set -o vi
 
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-alias ls='ls --color=auto'
 eval $(dircolors -b $HOME/.dircolors)
 
 #-------------------------------------------------------------------------------
@@ -43,6 +44,7 @@ alias wifi-enable="sudo systemctl enable netctl-auto@wlp16s0.service"
 # Program configuration file aliases.
 alias sbashrc='source ~/.bashrc'
 alias bashrc='vim ~/.bashrc'
+alias sbash='source ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias tmuxrc='vim ~/.tmux.conf'
 alias xrc='vim ~/.Xresources'
@@ -51,6 +53,7 @@ alias vimprc='vim ~/.config/vimprobable/vimprobablerc'
 alias irssirc='vim ~/.irssi/config'
 alias mpdrc='vim ~/.mpd/mpd.conf'
 alias ncmpcpprc='vim ~/.ncmpcpp/config'
+alias xscreenrc='vim ~/.xscreensaver'
 
 # Command aliases.
 alias blfull='sudo tee /sys/class/backlight/acpi_video0/brightness <<< 11'
@@ -60,7 +63,7 @@ alias blfull='sudo tee /sys/class/backlight/acpi_video0/brightness <<< 11'
 ##
 
 export HISTFILESIZE=5000
-export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 #-------------------------------------------------------------------------------
 # ROS Configuration

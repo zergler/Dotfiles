@@ -1,16 +1,16 @@
 #-------------------------------------------------------------------------------
-# File:		    /etc/bash.bashrc
-# Authors:	    Igor Janjic
+# File:		/etc/bash.bashrc
+# Authors:	Igor Janjic
 # Description:	System configuration file for bash.
 #		
-#		        This file is sourced by all *interactive* bash shells on
-#		        startup, including some apparently interactive shells such as
-#		        scp and rcp that can't tolerate any output. So make sure this
-#		        doesn't display anything or bad things will happen!
+#		This file is sourced by all *interactive* bash shells on
+#		startup, including some apparently interactive shells such as
+#		scp and rcp that can't tolerate any output. So make sure this
+#		doesn't display anything or bad things will happen!
 #	
-#		        Test for an interactive shell. There is no need to set anything
-#		        past this point for scp and rcp, and it's important to refrain
-#		        from outputting anything in those cases.
+#		Test for an interactive shell. There is no need to set anything
+#		past this point for scp and rcp, and it's important to refrain
+#		from outputting anything in those cases.
 ##------------------------------------------------------------------------------
 
 # If not running interactively, don't do anything!
@@ -40,7 +40,11 @@ esac
 
 #[[ "$PS1" ]] && /usr/bin/fortune
 
-PS1="\n \[\e[1;37m\]┌─[ \[\e[1;34m\]\u \[\e[1;34m\]@ \[\e[1;32m\]\w \[\e[1;37m\]]\[\e[1;35m\] \n\[\e[1;37m\] └─[\[\e[1;36m\] \d \[\e[1;33m\]\T \[\e[1;37m\]]--> \[\e[0;37m\]" 
+# Colors on ls.
+alias ls='ls --color=auto'
+
+# Command prompt.
+PS1="\n \[\e[1;37m\]┌─[ \[\e[1;31m\]\u \[\e[1;34m\]@ \[\e[1;32m\]\w \[\e[1;37m\]]\[\e[1;35m\] \n\[\e[1;37m\] └─[\[\e[1;36m\] \d \[\e[1;33m\]\T \[\e[1;37m\]]--> \[\e[0;37m\]" 
 PS2="> "
 PS3="> "
 PS4="+ "
