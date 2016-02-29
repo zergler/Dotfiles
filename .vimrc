@@ -30,6 +30,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'vim-scripts/CycleColor'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -37,7 +38,7 @@ NeoBundle 'flazz/vim-colorschemes'
 call neobundle#end()
 
 set nocompatible
-filetype plugin indent on
+filetype plugin on
 
 " If there are uninstalled bundles found on startup, this will conveniently
 " prompt you to install them.
